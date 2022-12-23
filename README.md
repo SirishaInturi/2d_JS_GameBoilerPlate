@@ -5,6 +5,7 @@ JavaScript 2d Game BoilerPlate
 This code can be used as a basic boilerPlate/ start of any javascript 2d game.
 
 The folder Structure is as below:
+
 Base_game_folder/
 ├── src/
 │   ├── characters/
