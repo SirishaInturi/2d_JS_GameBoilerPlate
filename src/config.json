@@ -1,0 +1,301 @@
+{
+  "player": {
+    "x": 0,
+    "y": 0,
+    "width": 32,
+    "height": 32,
+    "speed": 5,
+    "spritesheet": {
+      "src": "./player.png",
+      "frameWidth": 32,
+      "frameHeight": 32,
+      "numFrames": 4
+    },
+    "states": {
+      "idle": {
+        "frames": [0],
+        "fps": 1
+      },
+      "running": {
+        "frames": [0, 1, 2, 3],
+        "fps": 10
+      }
+    }
+  },
+  "enemies": {
+    "groundEnemy": {
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 32,
+      "speed": 5,
+      "spritesheet": {
+        "src": "./groundEnemy.png",
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "numFrames": 4
+      },
+      "states": {
+        "idle": {
+          "frames": [0],
+          "fps": 1
+        },
+        "running": {
+          "frames": [0, 1, 2, 3],
+          "fps": 10
+        }
+      }
+    },
+    "flyingEnemy": {
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 32,
+      "speed": 5,
+      "spritesheet": {
+        "src": "./flyingEnemy.png",
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "numFrames": 4
+      },
+      "states": {
+        "idle": {
+          "frames": [0],
+          "fps": 1
+        },
+        "flying": {
+          "frames": [0, 1, 2, 3],
+          "fps": 10
+        }
+      }
+    },
+    "crawlingEnemy": {
+      "x": 0,
+      "y": 0,
+      "width": 32,
+      "height": 32,
+      "speed": 5,
+      "spritesheet": {
+        "src": "./crawlingEnemy.png",
+        "frameWidth": 32,
+        "frameHeight": 32,
+        "numFrames": 4
+      },
+      "states": {
+        "idle": {
+          "frames": [0],
+          "fps": 1
+        },
+        "crawling": {
+          "frames": [0, 1, 2, 3],
+          "fps": 10
+        }
+      }
+    }
+  },
+  "levels": [
+    {
+      "width": 640,
+      "height": 480,
+      "backgroundColor": "#ffffff"
+    },
+    {
+      "width": 800,
+      "height": 600,
+      "backgroundColor": "#000000"
+    },
+    {
+      "width": 960,
+      "height": 720,
+      "backgroundColor": "#ff0000"
+    },
+    {
+      "width": 1120,
+      "height": 840,
+      "backgroundColor": "#00ff00"
+    },
+    {
+      "width": 1280,
+      "height": 960,
+      "backgroundColor": "#0000ff"
+    }
+  ],
+  "menu": {
+    "title": "My Game",
+    "options": [
+      {
+        "text": "Start Game",
+        "action": "startGame"
+      },
+      {
+        "text": "Options",
+        "action": "showOptions"
+      },
+      {
+        "text": "Quit",
+        "action": "quitGame"
+      }
+    ]
+  },
+  "NPCs": {
+    "merchant": {
+      "x": 100,
+      "y": 100,
+      "width": 50,
+      "height": 50,
+      "type": "merchant",
+      "spritesheet": {
+        "src": "./assets/merchant.png",
+        "frameWidth": 50,
+        "frameHeight": 50,
+        "numFrames": 8
+      },
+      "states": {
+        "idle": {
+          "fps": 8,
+          "frames": [0, 1, 2, 3]
+        },
+        "talking": {
+          "fps": 8,
+          "frames": [4, 5, 6, 7]
+        }
+      }
+    },
+    "questGiver": {
+      "x": 200,
+      "y": 200,
+      "width": 50,
+      "height": 50,
+      "type": "questGiver",
+      "spritesheet": {
+        "src": "./assets/questGiver.png",
+        "frameWidth": 50,
+        "frameHeight": 50,
+        "numFrames": 8
+      },
+      "states": {
+        "idle": {
+          "fps": 8,
+          "frames": [0, 1, 2, 3]
+        },
+        "talking": {
+          "fps": 8,
+          "frames": [4, 5, 6, 7]
+        }
+      }
+    },
+    "follower": {
+      "x": 300,
+      "y": 300,
+      "width": 50,
+      "height": 50,
+      "type": "follower",
+      "spritesheet": {
+        "src": "./assets/follower.png",
+        "frameWidth": 50,
+        "frameHeight": 50,
+        "numFrames": 8
+      },
+      "states": {
+        "idle": {
+          "fps": 8,
+          "frames": [0, 1, 2, 3]
+        },
+        "following": {
+          "fps": 8,
+          "frames": [4, 5, 6, 7]
+        }
+      }
+    },
+    "ally": {
+      "x": 400,
+      "y": 400,
+      "width": 50,
+      "height": 50,
+      "type": "ally",
+      "spritesheet": {
+        "src": "./assets/ally.png",
+        "frameWidth": 50,
+        "frameHeight": 50,
+        "numFrames": 8
+      },
+      "states": {
+        "idle": {
+          "fps": 8,
+          "frames": [0, 1, 2, 3]
+        },
+        "attacking": {
+          "fps": 8,
+          "frames": [4, 5, 6, 7]
+        }
+      }
+    },
+    "foe": {
+      "x": 500,
+      "y": 500,
+      "width": 50,
+      "height": 50,
+      "type": "foe",
+      "spritesheet": {
+        "src": "./assets/foe.png",
+        "frameWidth": 50,
+        "frameHeight": 50,
+        "numFrames": 8
+      },
+      "states": {
+        "idle": {
+          "fps": 8,
+          "frames": [0, 1, 2, 3]
+        },
+        "attacking": {
+          "fps": 8,
+          "frames": [4, 5, 6, 7]
+        }
+      }
+    }
+  },
+  "powerUps": [
+    {
+      "type": "health",
+      "value": 10
+    },
+    {
+      "type": "damage",
+      "value": 5
+    },
+    {
+      "type": "speed",
+      "value": 2
+    }
+  ],
+  "otherElements": {
+    "platforms": [
+      {
+        "x": 0,
+        "y": 300,
+        "width": 640,
+        "height": 20
+      },
+      {
+        "x": 500,
+        "y": 200,
+        "width": 200,
+        "height": 20
+      }
+    ],
+    "spikes": [
+      {
+        "x": 100,
+        "y": 400,
+        "width": 32,
+        "height": 32
+      },
+      {
+        "x": 200,
+        "y": 400,
+        "width": 32,
+        "height": 32
+      }
+    ]
+  }
+}
